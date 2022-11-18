@@ -630,11 +630,12 @@ function validateUpdateForm($form_data,$image_data){
     
        if($image_data['name']){
            $image = basename($image_data['name']);
+
            $type = strtolower(pathinfo($image,PATHINFO_EXTENSION));
            $size = $image_data['size']/1000;
 
            if($type!='jpg' && $type!='jpeg' && $type!='png'){
-            $response['msg']="only jpg,jpeg,png images are allowed";
+            $response['msg']="only jpg,jpeg,png files are allowed";
             $response['status']=false;
             $response['field']='profile_pic';
         }
@@ -694,26 +695,39 @@ function validatePostImage($image_data){
             $response['status']=false;
             $response['field']='post_img';
         }
-        
-   
-    
-       if($image_data['name']){
-           $image = basename($image_data['name']);
+        //Video Validation
+        if(!$image_data['name']){
+            $image = basename($image_data['name']);
            $type = strtolower(pathinfo($image,PATHINFO_EXTENSION));
            $size = $image_data['size']/1000;
 
-           if($type!='jpg' && $type!='jpeg' && $type!='png'){
-            $response['msg']="only jpg,jpeg,png images are allowed";
+           if($type!='mp4' && $type!='mov' && $type!='flv' ){
+            $response['msg']="only mov, mp4 and flv files are allowed";
             $response['status']=false;
             $response['field']='post_img';
-        }
 
-        if($size>2000){
-            $response['msg']="upload image less then 1 mb";
-            $response['status']=false;
-            $response['field']='post_img';
         }
-       }
+        else
+        {
+            if($image_data['name']){
+                $image = basename($image_data['name']);
+                $type = strtolower(pathinfo($image,PATHINFO_EXTENSION));
+                $size = $image_data['size']/1000;
+     
+                if($type!='jpg' && $type!='jpeg' && $type!='png' ){
+                 $response['msg']="only jpg,jpeg,png images are allowed";
+                 $response['status']=false;
+                 $response['field']='post_img';
+             }
+     
+             if($size<1000){
+                 $response['msg']="upload image less then 1 mb xyz";
+                 $response['status']=false;
+                 $response['field']='post_img';
+             }
+            }
+        }
+    }
 
         return $response;
     

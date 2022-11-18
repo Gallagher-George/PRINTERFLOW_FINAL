@@ -1,5 +1,6 @@
 body{
-    background: #f5f9f9;
+    background: #2e2e2c;
+    color: #ffffff;
 }
 
 .login{
@@ -9,3 +10,18 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+/*NAVBAR*/
+.navbar{
+    background-image: linear-gradient(#8f64d5, #6638a6) !important ;
+}
+
+/*Home page feed Cards*/
+.rounded-4{
+    border-radius: .7rem !important;;
+}
+
+/*Font color*/
+ 
+
+ 

@@ -1,19 +1,24 @@
 <?php if(isset($_SESSION['Auth'])){ ?>
+<!--Add New Post Modal-->
 <div class="modal fade" id="addpost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
   <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Add New Post</h5>
+                <h5 class="modal-title text-dark">Add New Post</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+              <!---image Upload--> 
                 <img src="" style="display:none" id="post_img" class="w-100 rounded border">
                 <form method="post" action="assets/php/actions.php?addpost" enctype="multipart/form-data">
                     <div class="my-3">
                         <input class="form-control" name="post_img" type="file" id="select_post_img">
                     </div>
+                    <!---Video Upload--> 
+                    
+                    <!---Video Upload--> 
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Say Something</label>
+                        <label for="exampleFormControlTextarea1" class="form-label text-dark">Say Something</label>
                         <textarea name="post_text" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
                     </div>
     
@@ -25,7 +30,7 @@
         </div>
   </div>
 </div>
-
+<!--Add New Post Modal-->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="notification_sidebar" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Notifications</h5>
@@ -48,10 +53,10 @@ foreach($notifications as $not){
                         <div><img src="assets/images/profile/<?=$fuser['profile_pic']?>" alt="" height="40" width="40" class="rounded-circle border">
                         </div>
                         <div>&nbsp;&nbsp;</div>
-                        <div class="d-flex flex-column justify-content-center" <?=$post?>>
+                        <div class="d-flex flex-column justify-content-center text-dark" <?=$post?>>
                             <a href='?u=<?=$fuser['username']?>' class="text-decoration-none text-dark"><h6 style="margin: 0px;font-size: small;"><?=$fuser['first_name']?> <?=$fuser['last_name']?></h6></a>
-                            <p style="margin:0px;font-size:small" class="<?=$not['read_status']?'text-muted':''?>">@<?=$fuser['username']?> <?=$not['message']?></p>
-                            <time style="font-size:small" class="timeago <?=$not['read_status']?'text-muted':''?> text-small" datetime="<?=$time?>"></time>
+                            <p style="margin:0px;font-size:small color:red;" class="text-dark <?=$not['read_status']?'text-dark':''?>">@<?=$fuser['username']?> <?=$not['message']?></p>
+                            <time style="font-size:small" class="timeago <?=$not['read_status']?'text-dark':''?> text-small" datetime="<?=$time?>"></time>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">

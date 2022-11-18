@@ -202,7 +202,7 @@ if(isset($_GET['updateprofile'])){
      
 }
 
-//for managing add post
+//for managing add post images
 if(isset($_GET['addpost'])){
    $response = validatePostImage($_FILES['post_img']);
 
@@ -217,3 +217,5 @@ if(createPost($_POST,$_FILES['post_img'])){
     header("location:../../");
    }
 }
+
+

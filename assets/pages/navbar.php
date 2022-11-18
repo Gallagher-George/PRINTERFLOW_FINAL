@@ -1,5 +1,7 @@
 <?php global $user;?>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border">
+<style><?php include 'assets/css/custom.css'; ?></style>
+<style><?php include 'assets/bootstrap/css/bootstrap.css'; ?></style>
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container col-lg-9 col-sm-12 col-md-10 d-flex flex-lg-row flex-md-row flex-sm-column justify-content-between">
             <div class="d-flex justify-content-between col-lg-8 col-sm-12">
                 <a class="navbar-brand" href="?">

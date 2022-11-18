@@ -4,6 +4,8 @@
  global $follow_suggestions;
  
  ?>
+<style><?php include 'assets/css/custom.css'; ?></style>
+<style><?php include 'assets/bootstrap/css/bootstrap.css'; ?></style>
     <div class="container col-md-10 col-sm-12 col-lg-9 rounded-0 d-flex justify-content-between">
         <div class="col-md-8 col-sm-12" style="max-width:93vw">
 
@@ -18,11 +20,11 @@ foreach($posts as $post){
     $likes = getLikes($post['id']);
     $comments = getComments($post['id']);
     ?>
-     <div class="card mt-4">
+     <div class="card mt-4" style="width: 30em ;">
                 <div class="card-title d-flex justify-content-between  align-items-center">
 
                     <div class="d-flex align-items-center p-2">
-                        <img src="assets/images/profile/<?=$post['profile_pic']?>" alt="" height="30" width="30" class="rounded-circle border">&nbsp;&nbsp;<a href='?u=<?=$post['username']?>' class="text-decoration-none text-dark"><?=$post['first_name']?> <?=$post['last_name']?></a>
+                        <img src="assets/images/profile/<?=$post['profile_pic']?>" alt="" height="30" width="30" class="rounded-circle border">&nbsp;&nbsp;<a href='?u=<?=$post['username']?>' class="text-decoration-none text-white"><?=$post['first_name']?> <?=$post['last_name']?></a>
                     </div>
                     <div class="p-2">
                         <?php
@@ -43,8 +45,31 @@ if($post['uid']==$user['id']){
                       
                     </div>
                 </div>
-                <img src="assets/images/posts/<?=$post['post_img']?>" loading=lazy class="" alt="...">
+                <?php
+                 $file=explode('.',$post['post_img']);
+                 $end=end($file);
+                 $allowed_videoExtension = array('avi','flv','mov','wmv','mp4');
+                if(in_array($end, $allowed_videoExtension))
+                {
+                 
+                    ?>
+
+                <!--VIDEO--->
+                <video width="100%" height="240" controls>
+                    <source src="assets/images/posts/<?=$post['post_img']?>">
+                </video>
+                <!--END VIDEO--->
+
+                        <?php
+                }
+                
+                ?>
+              
+
+                <!--IMAGES--->
+                <img src="assets/images/posts/<?=$post['post_img']?>" loading=lazy style="" alt="...">
                 <h4 style="font-size: x-larger" class="p-2 border-bottom d-flex">
+                <!--END IMAGES--->
                <span>
                <?php
 if(checkLikeStatus($post['id'])){
@@ -79,7 +104,7 @@ if($post['post_text']){
                 ?>
                 <div class="input-group p-2 <?=$post['post_text']?'border-top':''?>">
                  
-                        <input type="text" class="form-control rounded-0 border-0 comment-input" placeholder="say something.."
+                        <input type="text" class="form-control rounded-4 border-0 comment-input" placeholder="say something.."
                                 aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="btn btn-outline-primary rounded-0 border-0 add-comment" data-page='wall' data-cs="comment-section<?=$post['id']?>" data-post-id="<?=$post['id']?>" type="button"
                                 id="button-addon2">Post</button>
@@ -248,14 +273,14 @@ continue;
                 </div>
                 <div>&nbsp;&nbsp;&nbsp;</div>
                 <div class="d-flex flex-column justify-content-center">
-                <a href='?u=<?=$user['username']?>' class="text-decoration-none text-dark"><h6 style="margin: 0px;"><?=$user['first_name']?> <?=$user['last_name']?></h6></a>
-                    <p style="margin:0px;" class="text-muted">@<?=$user['username']?></p>
+                <a href='?u=<?=$user['username']?>' class="text-decoration-none text-white"><h6 style="margin: 0px;"><?=$user['first_name']?> <?=$user['last_name']?></h6></a>
+                    <p style="margin:0px;" class="text-white">@<?=$user['username']?></p>
                 </div>
             </div>
 
 
             <div>
-                <h6 class="text-muted p-2">You Can Follow Them</h6>
+                <h6 class="text-white p-2">You Can Follow Them</h6>
                 <?php
 foreach($follow_suggestions as $suser){
     ?>
@@ -265,7 +290,7 @@ foreach($follow_suggestions as $suser){
                         </div>
                         <div>&nbsp;&nbsp;</div>
                         <div class="d-flex flex-column justify-content-center">
-                            <a href='?u=<?=$suser['username']?>' class="text-decoration-none text-dark"><h6 style="margin: 0px;font-size: small;"><?=$suser['first_name']?> <?=$suser['last_name']?></h6></a>
+                            <a href='?u=<?=$suser['username']?>' class="text-decoration-none text-white"><h6 style="margin: 0px;font-size: small;"><?=$suser['first_name']?> <?=$suser['last_name']?></h6></a>
                             <p style="margin:0px;font-size:small" class="text-muted">@<?=$suser['username']?></p>
                         </div>
                     </div>
@@ -278,7 +303,7 @@ foreach($follow_suggestions as $suser){
 }
 
 if(count($follow_suggestions)<1){
-    echo "<p class='p-2 bg-white border rounded text-center'>No Suggestions For You</p>";
+    echo "<p class='p-2 bg-white border rounded text-center text-dark'>No Suggestions For You</p>";
 }
                 ?>
                 
