@@ -1,6 +1,12 @@
 
     <div class="login">
+          
         <div class="col-sm-12 col-md-4 bg-white border rounded p-4 shadow-sm">
+            <!-- LOGIN SIDE LOGO STUFF-->
+            <div class="loginPageLogo">
+                <img src="assets/images/printerflowLogoColored.png" alt="printerflow_logo" height="300" padding-bottom="10" style="padding-bottom: 10px;">
+            </div>
+            <!--LOGO STUFF-->
             <form method="post" action="assets/php/actions.php?login">
                 <div class="d-flex justify-content-center">
 

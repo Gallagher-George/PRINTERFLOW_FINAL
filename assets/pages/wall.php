@@ -20,7 +20,8 @@ foreach($posts as $post){
     $likes = getLikes($post['id']);
     $comments = getComments($post['id']);
     ?>
-     <div class="card mt-4" style="width: 30em ;">
+    <!--USER HOMEPAGE/CARD STUFF-->
+     <div class="card mt-4" style="width: 45em ;">
                 <div class="card-title d-flex justify-content-between  align-items-center">
 
                     <div class="d-flex align-items-center p-2">

@@ -14,15 +14,10 @@ global $user;
                 <h1 class="h5 mb-3 fw-normal">Hello, <?=$user['first_name'].' '.$user['last_name'].' ('.$user['email'].') '?>Your Account Is Blocked By Admin</h1>
 
 
-
-
                 <div class="mt-3 d-flex justify-content-between align-items-center">
                     <a href="assets/php/actions.php?logout" class="btn btn-danger" type="submit">Logout</a>
 
-
-
                 </div>
-
             </form>
         </div>
     </div>
