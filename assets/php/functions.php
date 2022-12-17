@@ -664,7 +664,7 @@ function validateUpdateForm($form_data,$image_data){
 if(!$data['password']){
 $password = $_SESSION['userdata']['password'];
 }else{
-    $password = md5($password);
+    $password = md5($password);//PASSWORD HASHING WITH MD5
     $_SESSION['userdata']['password']=$password;
 }
 

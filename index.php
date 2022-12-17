@@ -1,9 +1,20 @@
-<?php 
+<?php
+
+// $x = md5('amalan');
+// echo $x;
+
+/**
+ * In this case, we want to increase the default cost for BCRYPT to 12.
+ * Note that we also switched to BCRYPT, which will always be 60 characters.
+ */
+// $options = [
+//     'cost' => 12,
+// ];
+// echo password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
 
 require_once'assets/php/functions.php';
 if(isset($_GET['newfp']))
 {
-
 	unset($_SESSION['auth_temp']);
 	unset($_SESSION['forgot_email']);
 	unset($_SESSION['forgot_code']);

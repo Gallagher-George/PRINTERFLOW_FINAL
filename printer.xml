@@ -1,0 +1,10 @@
+172.58.86.196 - - [12/Dec/2022:09:03:01 -0700] "GET / HTTP/1.1" 200 962 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1" 10
+172.58.86.196 - - [12/Dec/2022:09:03:01 -0700] "GET /favicon.ico HTTP/1.1" 404 1699 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1" 1
+172.58.86.196 - - [12/Dec/2022:09:03:01 -0700] "GET /favicon.ico HTTP/1.1" 404 1699 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1" 1
+107.2.113.175 - - [12/Dec/2022:09:04:36 -0700] "GET / HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" 9
+107.2.113.175 - - [12/Dec/2022:09:04:37 -0700] "GET /favicon.ico HTTP/1.1" 404 1699 "http://printerflow.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" 1
+107.2.113.175 - - [12/Dec/2022:09:04:39 -0700] "GET / HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" 9
+107.2.113.175 - - [12/Dec/2022:09:06:13 -0700] "GET / HTTP/1.1" 200 45 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" 521
+172.58.80.80 - - [12/Dec/2022:09:06:51 -0700] "GET / HTTP/1.1" 200 45 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1" 12
+172.58.82.171 - - [12/Dec/2022:09:06:52 -0700] "GET /favicon.ico HTTP/1.1" 404 1699 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1" 1
+172.58.82.171 - - [12/Dec/2022:09:06:52 -0700] "GET /favicon.ico HTTP/1.1" 404 1699 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1" 1

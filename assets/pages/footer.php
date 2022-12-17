@@ -14,23 +14,17 @@
                     <div class="my-3">
                         <input class="form-control" name="post_img" type="file" id="select_post_img">
                     </div>
-                    <!---Video Upload--> 
-                    
-                    <!---Video Upload--> 
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label text-dark">Say Something</label>
                         <textarea name="post_text" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
                     </div>
-    
-                <button type="submit" class="btn btn-primary">Post</button>
-          
+                  <button type="submit" class="btn btn-primary">Post</button>
                 </form>
             </div>
-   
         </div>
   </div>
 </div>
-<!--Add New Post Modal-->
+<!--END Add New Post Modal-->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="notification_sidebar" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Notifications</h5>
